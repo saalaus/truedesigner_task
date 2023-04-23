@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-3cfb730f.js";const t=document.getElementById("validate_input"),e=document.getElementById("validate_button");t.addEventListener("input",()=>{t.value?e.classList.remove("disabled"):e.classList.add("disabled")});

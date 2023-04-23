@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Дата и время события - События</title>
+
+    
+    
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" crossorigin src="/assets/datetime-1921ea2a.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-3cfb730f.js">
+  <link rel="stylesheet" href="/assets/index-b94a5372.css">
+  <link rel="stylesheet" href="/assets/base_styles-9c300c57.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__left-block">
+            <div class="left-block__inner">
+                <div class="inner__header">
+                    <div class="rectangle"></div>
+                    <div class="header__title">
+                        События
+                    </div>
+                </div>
+                <div class="left-block__title">
+                    Дата и время события
+                </div>
+            </div>
+        </div>
+        <div class="container__right-block">
+            <div class="right-block__close">
+                <a class="close__icon" href="#">
+                    <img src="/assets/close-e6836cfa.svg" alt="close">
+                </a>
+            </div>
+            <div class="right-block__form">
+                <div class="form__description">
+                    Укажите дату и время события<span class="required">*</span>
+                </div>
+                <div class="form__group">
+                    <div class="datepicker-group">
+                        <label id="datepicker-label" class="datepicker-label">Дата</label>
+                        <input id="datepicker" class="datepicker-input" type="text">
+                        <span class="calendar-icon"></span>
+                    </div>
+                    <div class="datepicker-group time-input">
+                        <label id="timepicker-label" class="datepicker-label">Время</label>
+                        <input id="timepicker" class="datepicker-input" type="text">
+                        <span class="cloack-icon"></span>
+                        <div class="dropdown-menu">
+                            <div class="hour-column">
+                                <div class="hour-option centered">08</div>
+                                <div class="hour-option centered">09</div>
+                                <div class="hour-option centered">10</div>
+                                <div class="hour-option centered">11</div>
+                                <div class="hour-option centered">12</div>
+                                <div class="hour-option centered">13</div>
+                                <div class="hour-option centered">14</div>
+                                <div class="hour-option centered">15</div>
+                                <div class="hour-option centered">16</div>
+                                <div class="hour-option centered">17</div>
+                                <div class="hour-option centered">18</div>
+                                <div class="hour-option centered">19</div>
+                            </div>
+                            <div class="seperate-column">
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                            </div>
+                            <div class="minute-column">
+                                <div class="minute-option centered">00</div>
+                                <div class="minute-option centered">05</div>
+                                <div class="minute-option centered">10</div>
+                                <div class="minute-option centered">15</div>
+                                <div class="minute-option centered">20</div>
+                                <div class="minute-option centered">25</div>
+                                <div class="minute-option centered">30</div>
+                                <div class="minute-option centered">35</div>
+                                <div class="minute-option centered">40</div>
+                                <div class="minute-option centered">45</div>
+                                <div class="minute-option centered">50</div>
+                                <div class="minute-option centered">55</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form__group2" class="form__group hide">
+                    <div class="datepicker-group">
+                        <label id="datepicker-label2" class="datepicker-label"></label>
+                        <input id="datepicker2" class="datepicker-input" type="text">
+                        <span class="calendar-icon"></span>
+                    </div>
+                    <div class="datepicker-group time-input">
+                        <label id="timepicker-label2" class="datepicker-label"></label>
+                        <input id="timepicker2" class="datepicker-input" type="text">
+                        <span class="cloack-icon"></span>
+                        <div id="dropdown-menu2" class="dropdown-menu">
+                            <div class="hour-column">
+                                <div class="hour-option centered">08</div>
+                                <div class="hour-option centered">09</div>
+                                <div class="hour-option centered">10</div>
+                                <div class="hour-option centered">11</div>
+                                <div class="hour-option centered">12</div>
+                                <div class="hour-option centered">13</div>
+                                <div class="hour-option centered">14</div>
+                                <div class="hour-option centered">15</div>
+                                <div class="hour-option centered">16</div>
+                                <div class="hour-option centered">17</div>
+                                <div class="hour-option centered">18</div>
+                                <div class="hour-option centered">19</div>
+                            </div>
+                            <div class="seperate-column">
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                                <div class="seperate centered">-</div>
+                            </div>
+                            <div class="minute-column">
+                                <div class="minute-option centered">00</div>
+                                <div class="minute-option centered">05</div>
+                                <div class="minute-option centered">10</div>
+                                <div class="minute-option centered">15</div>
+                                <div class="minute-option centered">20</div>
+                                <div class="minute-option centered">25</div>
+                                <div class="minute-option centered">30</div>
+                                <div class="minute-option centered">35</div>
+                                <div class="minute-option centered">40</div>
+                                <div class="minute-option centered">45</div>
+                                <div class="minute-option centered">50</div>
+                                <div class="minute-option centered">55</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="add-end" class="add-end">
+                    <span class="plus-icon"></span>
+                    Добавить дату завершения
+                </div>
+            </div>
+
+            <div class="right-block__footer">
+                <div class="footer__progress">
+                    <img class="progress_img" src="/assets/progress_done-a5b2d923.svg" alt="progress" />
+                    <img class="progress_img" src="/assets/progress_done-a5b2d923.svg" alt="progress" />
+                    <img class="progress_img" src="/assets/progress_done-a5b2d923.svg" alt="progress" />
+                    <img class="progress_img" src="/assets/progress_undone-d78806cd.svg" alt="progress" />
+                    <img class="progress_img" src="/assets/progress_undone-d78806cd.svg" alt="progress" />
+                </div>
+                <div class="footer__controller">
+                    <a class="btn-secondary" href="/src/2_description/index.html">Назад</a>
+                    <a id="validate_button" class="btn-primary" href="/src/4_map/index.html">
+                        Далее
+                        <span class="arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
