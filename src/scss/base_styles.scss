@@ -1,0 +1,134 @@
+@import "reset.scss";
+@import "fonts.scss";
+@import "ui.scss";
+
+/* Базовая верстка страницы (begin) */
+.container {
+    display: flex;
+
+    height: 100vh;
+
+    /* Левый блок (begin) */
+    .container__left-block {
+        width: 49%;
+
+        background: url("../img/background.jpg") no-repeat center;
+        background-size: cover;
+
+        .left-block__inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            margin-left: 150px;
+            height: 100vh;
+
+            .inner__header {
+                position: absolute;
+                top: 0;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                padding-top: 60px;
+
+                .rectangle {
+                    width: 3px;
+                    height: 13px;
+
+                    background: #e62128;
+                }
+
+                .header__title {
+                    margin-left: 10px;
+
+                    text-transform: uppercase;
+
+                    font-family: "Exo 2";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1em;
+                    line-height: 20px;
+                    letter-spacing: 0.02em;
+
+                    color: white;
+                }
+            }
+            .left-block__title {
+                max-width: 484px;
+
+                font-family: "Exo 2";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 2.5em;
+                line-height: 56px;
+
+                color: white;
+            }
+        }
+    }
+    /* Левый блок (end) */
+
+    /* Правый блок (begin) */
+    .container__right-block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 51%;
+
+        background-color: white;
+
+        .right-block__close {
+            align-self: flex-end;
+
+            padding: 46px 46px 0 0;
+            margin-bottom: auto;
+        }
+
+        .right-block__footer {
+            height: 81px;
+            margin-top: auto;
+            margin-bottom: 20px;
+
+            .footer__progress {
+                margin-bottom: 20px;
+                .progress_img:not(:first-of-type) {
+                    margin-left: 11px;
+                }
+            }
+
+            .footer__controller {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &::after {
+            height: 0;
+
+            content: "";
+        }
+    }
+    /* Правый блок (end) */
+}
+/* Базовая верстка страницы (end) */
+
+@media screen and (width < 900px) {
+    .container {
+        display: block;
+
+        width: 100%;
+
+        .container__left-block {
+            width: 100%;
+        }
+
+        .container__right-block {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+}

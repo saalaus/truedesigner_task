@@ -1,0 +1,114 @@
+/* Правая часть страницы(begin) */
+.right-block__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 100%;
+    margin-bottom: -12px;
+
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &::after {
+        display: block;
+
+        margin-bottom: auto;
+
+        content: "";
+    }
+}
+/* Правая часть страницы (end) */
+
+/* input с dropdown (begin) */
+.text-group {
+    position: relative;
+
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 20px;
+
+    .location-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 24px;
+        height: 24px;
+        // margin-left: 8px;
+        margin: 12px;
+
+        background-image: url("../img/svg/location.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .input {
+        padding-left: 47px;
+
+        border: 2px solid #e62128;
+        border-radius: 5px;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2;
+
+        display: none;
+        width: 457px;
+        height: 217px;
+
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+
+        .place-option {
+            display: flex;
+            align-items: center;
+
+            height: 56px;
+
+            cursor: pointer;
+
+            .location-icon {
+                position: unset;
+                top: unset;
+                left: unset;
+
+                display: block;
+            }
+            &:hover {
+                background: #fafafb;
+            }
+            &:last-child {
+                height: 49px;
+            }
+
+            .gray {
+                color: #868e96;
+            }
+
+            .red {
+                font-family: "Exo 2";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1em;
+                line-height: 22px;
+
+                color: #e62128;
+            }
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+}
+/* input с dropdown (end) */

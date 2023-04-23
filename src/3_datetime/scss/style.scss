@@ -1,0 +1,71 @@
+/* Форма на 3 странице (begin) */
+.form__description {
+    margin-bottom: 20px;
+
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3em;
+    line-height: 24px;
+
+    .required {
+        color: #e62128;
+    }
+}
+
+.form__group {
+    display: flex;
+
+    .datepicker-group {
+        margin-left: 10px;
+    }
+}
+/* Форма на 3 странице (end) */
+
+/* Кнопка добавить-удалить окончание (begin) */
+.add-end {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 22px;
+
+    color: #e62128;
+
+    .plus-icon {
+        display: block;
+
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+
+        background-image: url("../../img/svg/plus.svg");
+        background-repeat: no-repeat;
+    }
+    .trash-icon {
+        display: block;
+
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+
+        background-image: url("../../img/svg/trash.svg");
+        background-repeat: no-repeat;
+    }
+}
+/* Кнопка добавить-удалить окончание (end) */
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form__group2.hide {
+    display: none;
+}

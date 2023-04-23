@@ -1,0 +1,318 @@
+/* Secondary кнопка (begin) */
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 155px;
+    height: 40px;
+
+    text-decoration: none;
+
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 22px;
+
+    background: #ffffff;
+    border: 1px solid #e2e5e9;
+    border-radius: 5px;
+    color: #333333;
+}
+
+/* Secondary кнопка (end) */
+
+/* Primary кнопка (begin) */
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    width: 155px;
+
+    text-decoration: none;
+
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 22px;
+
+    color: white;
+    background: #e62128;
+    border: 0;
+    border-radius: 5px;
+
+    &.disabled {
+        pointer-events: none;
+
+        background: #f5f5f5;
+        color: #adb5bd;
+        > .arrow-right {
+            filter: brightness(1);
+        }
+    }
+
+    .arrow-right {
+        display: inline-block;
+
+        width: 24px;
+        height: 24px;
+        margin-left: 8px;
+
+        background-image: url("../img/svg/arrow_right.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: brightness(2);
+    }
+}
+
+/* Primary кнопка (end) */
+
+/* Обычный инпут (begin) */
+.input {
+    width: 458px;
+    max-height: 48px;
+    padding: 15px;
+
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 22px;
+
+    background: #ffffff;
+    border: 1px solid #e2e5e9;
+    border-radius: 5px;
+}
+/* Обычный инпут (end) */
+
+/* Выбор даты (begin) */
+.datepicker-group {
+    position: relative;
+
+    width: 223.42px;
+    height: 56px;
+
+    .datepicker-input {
+        display: inline-block;
+
+        width: 223.42px;
+        height: 48px;
+        padding: 15px;
+
+        font-family: "Exo 2";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 22px;
+
+        border: 1px solid #e2e5e9;
+        border-radius: 5px;
+    }
+
+    .datepicker-label {
+        position: absolute;
+        left: 12px;
+        top: -10px;
+
+        display: inline-block;
+
+        padding: 0 3px;
+
+        font-family: "Exo 2";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 18px;
+
+        color: #868e96;
+        background-color: white;
+    }
+
+    .calendar-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: block;
+
+        width: 24px;
+        height: 24px;
+        margin: 12px;
+
+        background-image: url("../img/svg/calendar.svg");
+        background-repeat: no-repeat;
+    }
+
+    .cloack-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: block;
+
+        width: 24px;
+        height: 24px;
+        margin: 12px;
+
+        background-image: url("../img/svg/cloack.svg");
+        background-repeat: no-repeat;
+    }
+}
+
+.calendar__arrow-right {
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../img/svg/arrow_right_calendar.svg");
+}
+
+.calendar__arrow-left {
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../img/svg/arrow_left_calendar.svg");
+}
+
+.view-switch {
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3em;
+    line-height: 24px;
+}
+
+.days-of-week {
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 20px;
+
+    color: #868e96;
+}
+
+.datepicker-cell {
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 24px;
+
+    color: #333333;
+
+    &.selected {
+        background: #e62128 !important;
+        border-radius: 5px;
+        color: white;
+    }
+}
+/* Выбор даты (end) */
+
+/* Выбор времени (begin) */
+.time-input {
+    position: relative;
+
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 20px;
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2;
+
+        display: none;
+        overflow-y: auto;
+
+        width: 172px;
+        height: 254px;
+
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+
+            background: #e2e5e9;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: white;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #e2e5e9;
+        }
+
+        .hour-column {
+            float: left;
+
+            .hour-option {
+                width: 60px;
+                height: 36px;
+
+                cursor: pointer;
+                text-align: center;
+
+                font-size: 1em;
+
+                &:hover {
+                    background: #f4f5f6;
+                    border-radius: 5px;
+                }
+
+                &.selected {
+                    background-color: #e62128;
+                    color: white;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .seperate-column {
+            float: left;
+            .seperate {
+                width: 40px;
+                height: 36px;
+
+                text-align: center;
+
+                font-size: 1em;
+            }
+        }
+
+        .minute-option {
+            float: right;
+
+            width: 60px;
+            height: 36px;
+
+            cursor: pointer;
+            text-align: center;
+
+            &:hover {
+                background: #f4f5f6;
+                border-radius: 5px;
+            }
+            &.selected {
+                background-color: #e62128;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+}
+/* Выбор времени (end) */
+
+@import "../../node_modules/vanillajs-datepicker/sass/datepicker";

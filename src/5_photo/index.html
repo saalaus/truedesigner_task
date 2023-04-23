@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Фото события - События</title>
+
+    <link rel="stylesheet" href="../scss/base_styles.scss" />
+    <link rel="stylesheet" href="scss/style.scss" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__left-block">
+            <div class="left-block__inner">
+                <div class="inner__header">
+                    <div class="rectangle"></div>
+                    <div class="header__title">События</div>
+                </div>
+                <div class="left-block__title">Добавьте фото события</div>
+            </div>
+        </div>
+        <div class="container__right-block">
+            <div class="right-block__close">
+                <a class="close__icon" href="#">
+                    <img src="/src/img/svg/close.svg" alt="close" />
+                </a>
+            </div>
+            <div class="right-block__form">
+                <div id="add-photo" class="add-photo">
+                    <div id="no-photo" class="no-photo">
+                        <input id="file-input" type="file" style="display: none" accept="image/*" />
+                        <span class="photo-icon"></span>
+                        <div class="text">
+                            Добавьте или перетащите сюда фото
+                            <span class="gray">Добавьте хотя бы 1 фото</span>
+                        </div>
+                    </div>
+                    <div id="photo-controller" class="photo-controller hidden">
+                        <div class="main_photo">Главное фото</div>
+                        <div class="close_main_photo">
+                            <a href="#" class="close__icon">
+                                <img class="close_img" src="/src/img/svg/close.svg" alt="close" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="additional-photo" class="additional-photo">
+                    <div id="additional-photo1" class="add-additional-photo">
+                        <input id="file-input2" type="file" name="file-input" style="display: none" accept="image/*" />
+                        <div id="no-photo" class="no-photo">
+                            <span class="photo-icon"></span>
+                        </div>
+                        <div id="photo-controller" class="photo-controller hidden"></div>
+                    </div>
+                    <div id="additional-photo2" class="add-additional-photo">
+                        <input id="file-input3" type="file" name="file-input" style="display: none" accept="image/*" />
+                        <div id="no-photo" class="no-photo">
+                            <span class="photo-icon"></span>
+                        </div>
+                        <div id="photo-controller" class="photo-controller hidden"></div>
+                    </div>
+                    <div class="help-text">
+                        Первое фото будет главным у СТО. Перетащите, чтобы
+                        изменить порядок
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-block__footer">
+                <div class="footer__progress">
+                    <img class="progress_img" src="/src/img/svg/progress_done.svg" alt="progress" />
+                    <img class="progress_img" src="/src/img/svg/progress_done.svg" alt="progress" />
+                    <img class="progress_img" src="/src/img/svg/progress_done.svg" alt="progress" />
+                    <img class="progress_img" src="/src/img/svg/progress_done.svg" alt="progress" />
+                    <img class="progress_img" src="/src/img/svg/progress_done.svg" alt="progress" />
+                </div>
+                <div class="footer__controller">
+                    <a class="btn-secondary" href="/src/4_map/index.html">Назад</a>
+                    <a id="validate_button" class="btn-primary disabled" href="/src/6_finish/index.html"
+                        disabled="true">
+                        Далее
+                        <span class="arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
