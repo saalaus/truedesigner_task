@@ -69,3 +69,8 @@
 #form__group2.hide {
     display: none;
 }
+
+.datepicker-cell.next:nth-last-child(-n+7) {
+  height: 0;
+  font-size: 0;
+}

@@ -10,11 +10,37 @@ var dropdown2 = document.querySelector("#dropdown-menu2");
 const $add_end = document.getElementById("add-end");
 let hide = 1;
 
+const dateFormat = {
+        toValue(date, format, locale) {
+            let dateObject;
+            return dateObject;
+        },
+        toDisplay(date, format, locale) {
+            const month = [
+                "Января",
+                "Февраля",
+                "Марта",
+                "Апреля",
+                "Майя",
+                "Июнья",
+                "Июлья",
+                "Августа",
+                "Сентября",
+                "Октября",
+                "Ноября",
+                "Декабря",
+            ][date.getMonth()];
+            const day = date.getDay();
+            const dayofweek = date.getDate();
+            return locale.daysMin[day] + ", " + dayofweek + " " + month;
+        },
+    }
+
 const datepicker = new Datepicker(document.querySelector("#datepicker"), {
     autohide: true,
     showOnClick: true,
     language: "ru",
-    format: "D, d MM",
+    format: dateFormat,
     nextArrow: "<span class='calendar__arrow-right'></span>",
     prevArrow: "<span class='calendar__arrow-left'></span>",
 });
@@ -23,7 +49,7 @@ const datepicker2 = new Datepicker(document.querySelector("#datepicker2"), {
     autohide: true,
     showOnClick: true,
     language: "ru",
-    format: "D, d MM",
+    format: dateFormat,
     nextArrow: "<span class='calendar__arrow-right'></span>",
     prevArrow: "<span class='calendar__arrow-left'></span>",
 });
@@ -55,7 +81,6 @@ function setTime(input) {
 Array.from(document.getElementsByClassName("hour-option")).forEach((option) => {
     const $input =
         option.parentElement.parentElement.parentElement.querySelector("input");
-    console.log(option.parentElement.parentElement.parentElement);
     option.addEventListener("click", (e) => {
         $input.value = e.target.innerText;
         const $prev_select = document.querySelector(".hour-option.selected");
