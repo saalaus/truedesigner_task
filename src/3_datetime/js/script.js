@@ -28,17 +28,39 @@ const datepicker2 = new Datepicker(document.querySelector("#datepicker2"), {
     prevArrow: "<span class='calendar__arrow-left'></span>",
 });
 
-input.onclick = function () {
-    dropdown.classList.toggle("show");
-};
+input.addEventListener("click", () => {
+    dropdown.classList.add("show");
+});
 
-input2.onclick = function () {
+input2.addEventListener("click", () => {
     dropdown2.classList.toggle("show");
-};
+});
+
+document.addEventListener("click", (e) => {
+    console.log(
+        e.target,
+        e.target.classList.contains("hour-option"),
+        e.target === input
+    );
+    if (!(e.target.classList.contains("hour-option") || e.target === input)) {
+        dropdown.classList.remove("show");
+    }
+    if (!(e.target.classList.contains("hour-option") || e.target === input2)) {
+        dropdown2.classList.remove("show");
+    }
+});
+
+
+function setTime(input) {
+    const hour = input.dataset.hour ? input.dataset.hour : "00";
+    const minute = input.dataset.minute ? input.dataset.minute : "00";
+    input.value = `${hour}:${minute}`;
+}
 
 Array.from(document.getElementsByClassName("hour-option")).forEach((option) => {
     const $input =
         option.parentElement.parentElement.parentElement.querySelector("input");
+    console.log(option.parentElement.parentElement.parentElement);
     option.addEventListener("click", (e) => {
         $input.value = e.target.innerText;
         const $prev_select = document.querySelector(".hour-option.selected");
@@ -46,6 +68,8 @@ Array.from(document.getElementsByClassName("hour-option")).forEach((option) => {
             $prev_select.classList.remove("selected");
         }
         e.target.classList.add("selected");
+        $input.dataset.hour = e.target.innerText;
+        setTime($input);
     });
 });
 
@@ -56,14 +80,16 @@ Array.from(document.getElementsByClassName("minute-option")).forEach(
                 "input"
             );
         option.addEventListener("click", (e) => {
-            $input.value = $input.value + ":" + e.target.innerText;
             const $prev_select = document.querySelector(
                 ".minute-option.selected"
             );
             if ($prev_select) {
                 $prev_select.classList.remove("selected");
             }
+            dropdown.classList.remove("show");
             e.target.classList.add("selected");
+            $input.dataset.minute = e.target.innerText;
+            setTime($input);
         });
     }
 );
