@@ -37,11 +37,6 @@ input2.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (e) => {
-    console.log(
-        e.target,
-        e.target.classList.contains("hour-option"),
-        e.target === input
-    );
     if (!(e.target.classList.contains("hour-option") || e.target === input)) {
         dropdown.classList.remove("show");
     }
